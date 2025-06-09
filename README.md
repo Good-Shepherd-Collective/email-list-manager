@@ -1,6 +1,6 @@
 # Email List Management Tools
 
-A Python project for managing and cleaning email lists, specifically designed to work with Sendy email marketing platform data.
+A Python project for managing and cleaning email lists, specifically designed to work with Sendy email marketing platform data. ( Cleaning emails w/ [millionverifier.com](https://app.millionverifier.com/email_verify))
 
 ## Overview
 
