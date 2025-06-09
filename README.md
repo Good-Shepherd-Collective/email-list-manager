@@ -134,6 +134,29 @@ python3 filter_master_list.py
 
 ## Installation
 
+This project uses Poetry for dependency management and virtual environments.
+
+### Prerequisites
+- Python 3.9 or higher
+- Poetry ([Installation Guide](https://python-poetry.org/docs/#installation))
+
+### Setup
+```bash
+# Clone the repository
+git clone https://github.com/Good-Shepherd-Collective/email-list-manager.git
+cd email-list-manager
+
+# Install dependencies (creates virtual environment automatically)
+poetry install
+
+# Activate the virtual environment
+poetry shell
+
+# Or run commands without activating
+poetry run python email_list_manager/export_bad_contacts.py
+```
+
+### Alternative Installation (without Poetry)
 ```bash
 pip install pandas mysql-connector-python
 ```
