@@ -87,6 +87,23 @@ Applies additional filters to remove specific types of emails and names.
 python3 filter_master_list.py
 ```
 
+### 6. `refactor_good_emails.py`
+Refactors email lists to match a specific CSV structure with cleaned names.
+
+**Features:**
+- Converts any CSV to match target structure: `"Name","Email","state","organization"`
+- Cleans problematic names (Excel errors, duplicates, dates as names)
+- Extracts names from email addresses when original names are unusable
+- Handles missing or malformed data gracefully
+
+**Usage:**
+```bash
+python3 refactor_good_emails.py
+```
+
+**Input:** `good_emails.csv` (any structure with Name and Email columns)  
+**Output:** `refactored_good_emails.csv` (standardized structure)
+
 ## Workflow
 
 1. **Export bad contacts** from Sendy database:
@@ -112,6 +129,11 @@ python3 filter_master_list.py
 5. **Apply additional filters**:
    ```bash
    python3 filter_master_list.py
+   ```
+
+6. **Refactor to standard structure** (optional):
+   ```bash
+   python3 refactor_good_emails.py
    ```
 
 ## File Structure
@@ -195,6 +217,26 @@ Based on recent run:
 - **Bad contacts identified**: 12,283 unique emails
 - **Final clean master list**: 56,024 emails
 - **Geographic filters removed**: 51 additional emails
+- **Email validation results**: 38,444 good emails processed
+- **Name cleaning results**: 9,833 names cleaned, 9,413 extracted from emails
+
+## Data Structure Standardization
+
+The project includes tools to standardize email lists to a consistent CSV format:
+
+**Target Structure:**
+```csv
+"Name","Email","state","organization"
+Philip Morris,pmorris@gmail.com,,
+Jane Webster,jwebster@gmail.com,,
+```
+
+**Name Cleaning Process:**
+- Removes Excel errors (`#NAME?`, `#DIV/0!`)
+- Fixes duplicated names (`(Alice) Louise (Alice) Louise` → `Louise`)
+- Converts dates used as names (`04-29-2023` → name from email)
+- Extracts names from email addresses when original is unusable
+- Handles missing data gracefully
 
 ## Security Notes
 
