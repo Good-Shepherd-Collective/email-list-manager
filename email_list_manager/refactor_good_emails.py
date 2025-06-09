@@ -126,12 +126,22 @@ def refactor_good_emails():
             # Write header with quotes
             f.write('"Name","Email","state","organization"\n')
             
-            # Write data rows
+            # Write data rows with proper CSV escaping
             for _, row in refactored_df.iterrows():
                 name = str(row['Name']).replace('"', '""')  # Escape quotes
                 email = str(row['Email']).replace('"', '""')
                 state = str(row['state']).replace('"', '""') if pd.notna(row['state']) else ''
                 org = str(row['organization']).replace('"', '""') if pd.notna(row['organization']) else ''
+                
+                # Quote fields that contain commas
+                if ',' in name:
+                    name = f'"{name}"'
+                if ',' in email:
+                    email = f'"{email}"'
+                if ',' in state:
+                    state = f'"{state}"'
+                if ',' in org:
+                    org = f'"{org}"'
                 
                 f.write(f'{name},{email},{state},{org}\n')
         print(f"✅ Created refactored_good_emails.csv with {len(refactored_df)} records")

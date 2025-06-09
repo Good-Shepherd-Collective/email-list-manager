@@ -1,0 +1,22 @@
+🚀 Starting Sendy email upload...
+🔗 Setting up SSH tunnel to amazon-sendy...
+✅ SSH tunnel established
+✅ Connected to database successfully
+✅ Found existing list: GDrive Refactored List (ID: 11)
+📊 Loaded 38074 records from CSV
+📋 Columns found: ['Name', 'Email', 'state', 'organization']
+📤 Starting batch upload...
+📊 Target list ID: 11
+📦 Batch size: 500
+📋 Records to process: 38074
+📋 First few emails to upload:
+   1. Janet Craig (janet_craig@btinternet.com)
+   2. Louise (alwilkens2@gmail.com)
+   3. Christine (liquideyes4@yahoo.com)
+
+❌ Error uploading subscribers: 'CMySQLCursor' object has no attribute 'connection'
+
+🎉 Upload completed!
+📋 List: GDrive Refactored List (ID: 11)
+📈 Total uploaded: 0 subscribers
+🔗 Closing SSH tunnel...
