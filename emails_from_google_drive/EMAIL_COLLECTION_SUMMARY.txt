@@ -1,0 +1,35 @@
+EMAIL COLLECTION SUMMARY
+========================
+
+I've successfully found and organized all the spreadsheets and CSV files containing email addresses from your Google Drive and Downloads folder. Here's what was discovered:
+
+TOTAL FILES COLLECTED: 4
+
+1. BOT SUBSCRIBERS TO DELETE (bot_subscribers_to_delete.csv)
+   - 63 email addresses
+   - Source: Local Downloads folder
+   - Content: List of suspicious bot subscribers to be removed
+   - Contains email addresses, names, and notes about why they're flagged as bots
+
+2. NEW WEBSITE SUBSCRIBERS BACKUP (new_website_subscribers_backup.csv)
+   - 99 email addresses  
+   - Source: Local Downloads folder
+   - Content: Recent website subscriber backup with timestamps
+   - Contains legitimate subscriber data with names, emails, timestamps, and dates
+
+3. 2018 SPEAKING TOUR CONTACTS (2018_speaking_tour_contacts.csv)
+   - 6 email addresses
+   - Source: Google Drive document "2018 speaking tour list"
+   - Content: Contact information for speaking tour organizers
+   - Contains names, emails, and event organization details
+
+4. GOOD SHEPHERD COLLECTIVE CONTACTS (good_shepherd_collective_contacts.csv)
+   - 2 email addresses
+   - Source: Google Drive document "Good Shepherd Collective 2024 proposal"
+   - Content: Organizational contact emails
+   - Contains primary and general contact emails
+
+TOTAL EMAIL ADDRESSES: 170
+LOCATION: /Users/codyorourke/Downloads/emails/
+
+All files have been moved to the "emails" folder in your Downloads directory as requested.
